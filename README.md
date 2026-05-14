@@ -1,4 +1,4 @@
-# Jose Alberto Enriquez Portfolio
+# Jose Alberto Enriquez Portafolio
 
 Portfolio profesional construido con `React`, `Vite` y `TypeScript` para presentar experiencia en desarrollo web, aplicaciones de escritorio, automatizacion de despliegues e infraestructura operada sobre `Proxmox`.
 
