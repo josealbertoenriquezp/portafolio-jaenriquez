@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV | Jose Alberto Enriquez</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5efe4;
+      --surface: #fffdf8;
+      --surface-soft: #ece5d8;
+      --ink: #15212b;
+      --muted: #51606e;
+      --line: #d8cfbf;
+      --accent: #0f766e;
+      --accent-soft: rgba(15, 118, 110, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(184, 105, 57, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(15, 118, 110, 0.1), transparent 22%),
+        var(--bg);
+      color: var(--ink);
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    p,
+    li {
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .sheet {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--surface);
+      box-shadow: 0 32px 100px rgba(21, 33, 43, 0.08);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 24px;
+      padding: 32px;
+      background:
+        linear-gradient(180deg, rgba(21, 33, 43, 0.98), rgba(26, 45, 57, 0.98));
+      color: #f9f6ee;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 10px;
+      border: 1px solid rgba(249, 246, 238, 0.18);
+      border-radius: 999px;
+      color: rgba(249, 246, 238, 0.76);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin-bottom: 10px;
+      font-size: clamp(2.1rem, 5vw, 3.3rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .hero h2 {
+      margin-bottom: 14px;
+      font-size: 1.1rem;
+      color: rgba(249, 246, 238, 0.88);
+    }
+
+    .hero p {
+      color: rgba(249, 246, 238, 0.78);
+    }
+
+    .hero-card {
+      padding: 22px;
+      border: 1px solid rgba(249, 246, 238, 0.12);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .contact-list,
+    .detail-list,
+    .stack-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-list strong,
+    .detail-list strong {
+      display: block;
+      margin-bottom: 4px;
+      color: rgba(249, 246, 238, 0.94);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .contact-list span,
+    .contact-list a,
+    .detail-list span {
+      color: rgba(249, 246, 238, 0.78);
+      text-decoration: none;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: #f5efe4;
+      color: #15212b;
+    }
+
+    .button.secondary {
+      border-color: rgba(249, 246, 238, 0.16);
+      color: rgba(249, 246, 238, 0.92);
+    }
+
+    .body {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: 0;
+    }
+
+    .main-column {
+      padding: 32px;
+    }
+
+    .side-column {
+      padding: 32px;
+      background: linear-gradient(180deg, rgba(236, 229, 216, 0.6), rgba(236, 229, 216, 0.3));
+      border-left: 1px solid var(--line);
+    }
+
+    section+section {
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    h3.section-title {
+      margin-bottom: 14px;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .lead {
+      font-size: 1.06rem;
+      color: var(--ink);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .experience-block+.experience-block {
+      margin-top: 28px;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .experience-header h4 {
+      margin: 0;
+      font-size: 1.18rem;
+    }
+
+    .experience-header span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .experience-role {
+      margin-bottom: 14px;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    li+li {
+      margin-top: 8px;
+    }
+
+    .side-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .side-card+.side-card {
+      margin-top: 16px;
+    }
+
+    .side-card h4 {
+      margin-bottom: 12px;
+      font-size: 0.98rem;
+    }
+
+    .stack-list div+div {
+      margin-top: 12px;
+    }
+
+    .stack-list strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    .footer-note {
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    @media (max-width: 880px) {
+
+      .hero,
+      .body {
+        grid-template-columns: 1fr;
+      }
+
+      .side-column {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="sheet">
+      <header class="hero">
+        <div>
+          <span class="eyebrow">Curriculum actualizado</span>
+          <h1>Jose Alberto Enriquez</h1>
+          <h2>Full Stack Developer | React, .NET y despliegue sobre infraestructura propia</h2>
+          <p>
+            Desarrollador con experiencia profesional desde 2018 en aplicaciones
+            web, APIs y mantenimiento evolutivo, combinado con trabajo propio en
+            desktop, automatizacion de despliegues e infraestructura operada en
+            Proxmox con observabilidad, logging, publicacion segura y base
+            practica en k3s.
+          </p>
+
+          <div class="actions">
+            <a class="button primary" href="/cv-jose-alberto-enriquez.pdf" download>
+              Descargar CV
+            </a>
+            <a class="button secondary" href="mailto:josealbertoenriquezp@gmail.com">
+              Contactar por email
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="contact-list">
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:josealbertoenriquezp@gmail.com">josealbertoenriquezp@gmail.com</a>
+            </div>
+            <div>
+              <strong>Telefono</strong>
+              <span>626224051</span>
+            </div>
+            <div>
+              <strong>Ubicacion</strong>
+              <span>Madrid, Espana</span>
+            </div>
+            <div>
+              <strong>GitHub</strong>
+              <a href="https://github.com/josealbertoenriquezp">github.com/josealbertoenriquezp</a>
+            </div>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="https://linkedin.com/in/jos%C3%A9-alberto-enriquez-pincay-7b02a8163">
+                linkedin.com/in/jose-alberto-enriquez-pincay-7b02a8163
+              </a>
+            </div>
+          </div>
+        </aside>
+      </header>
+
+      <div class="body">
+        <div class="main-column">
+          <section>
+            <h3 class="section-title">Perfil profesional</h3>
+            <p class="lead">
+              Perfil mixto entre desarrollo, entrega y operacion. Trabajo bien
+              cuando el software tiene que resolverse de punta a punta: desde la
+              implementacion y el mantenimiento evolutivo hasta el despliegue,
+              la trazabilidad y la mejora continua del entorno donde corre.
+            </p>
+            <p class="muted">
+              Actualmente continuo en BcDigital y en el proyecto de OHL,
+              trabajando con React y .NET en un contexto profesional real. En
+              paralelo, mis proyectos propios refuerzan una capa adicional de
+              autonomia tecnica en desktop, CI/CD, contenedores e infraestructura.
+            </p>
+            <div class="pill-row">
+              <span class="pill">React</span>
+              <span class="pill">.NET</span>
+              <span class="pill">ASP.NET Core</span>
+              <span class="pill">Angular</span>
+              <span class="pill">SQL</span>
+              <span class="pill">Docker</span>
+              <span class="pill">Proxmox</span>
+              <span class="pill">k3s</span>
+            </div>
+          </section>
+
+          <section>
+            <h3 class="section-title">Experiencia profesional</h3>
+
+            <div class="experience-block">
+              <div class="experience-header">
+                <h4>BcDigital</h4>
+                <span>01/2020 - Actualidad</span>
+              </div>
+              <div class="experience-role">Programador Full Stack</div>
+              <ul>
+                <li>
+                  Desarrollo y mantenimiento evolutivo de aplicaciones web,
+                  APIs REST, WebServices e integraciones sobre entornos .NET y
+                  frontend empresarial.
+                </li>
+                <li>
+                  Proyecto actual en OHL con React y .NET, participando en la
+                  evolucion y mantenimiento de producto en contexto profesional.
+                </li>
+                <li>
+                  Trabajo sobre stacks con .NET Core, ASP.NET MVC, C#, Angular,
+                  React, SQL Server, PostgreSQL y MariaDB, segun proyecto y
+                  cliente.
+                </li>
+                <li>
+                  Resolucion de incidencias, mantenimiento correctivo,
+                  incorporacion de nuevas funcionalidades y soporte a sistemas
+                  ya operativos.
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-block">
+              <div class="experience-header">
+                <h4>Samelan Soluciones Tecnologicas SL</h4>
+                <span>04/2018 - 12/2019</span>
+              </div>
+              <div class="experience-role">Programador Full Stack</div>
+              <ul>
+                <li>
+                  Desarrollo y mantenimiento de aplicaciones web y WebServices
+                  en proyectos orientados a cliente.
+                </li>
+                <li>
+                  Trabajo con Angular, TypeScript, Node.js, MongoDB, ASP.NET,
+                  C# y SQL Server segun contexto funcional.
+                </li>
+                <li>
+                  Base profesional inicial en mantenimiento evolutivo, logica
+                  de negocio y continuidad de aplicaciones ya publicadas.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h3 class="section-title">Entornos y proyectos relevantes</h3>
+            <ul>
+              <li>
+                <strong>OHL:</strong> proyecto actual con React y .NET dentro
+                de BcDigital.
+              </li>
+              <li>
+                <strong>QuizBuilder:</strong> aplicacion web para entrevistas
+                con Angular 5, TypeScript, Bootstrap, Node.js y MongoDB.
+              </li>
+              <li>
+                <strong>Loreto:</strong> mantenimiento IT y resolucion de
+                incidencias con ASP.NET MVC, Visual Basic .NET, C# y SQL Server.
+              </li>
+              <li>
+                <strong>TELF / SIATI / Datos Cliente:</strong> desarrollo de
+                varios WebServices SOAP implementando logica y funcionalidad en
+                ASP.NET, C# y SQL Server.
+              </li>
+              <li>
+                <strong>GrupoBC - Smartdoc SdNotarios:</strong> mantenimiento
+                de API REST en .NET Core y frontend Angular 7 con Angular
+                Material sobre PostgreSQL.
+              </li>
+              <li>
+                <strong>GrupoBC - Iahorro:</strong> mantenimiento de API REST
+                en .NET Core y frontend Angular 7 con Angular Material sobre
+                MariaDB.
+              </li>
+              <li>
+                <strong>Titanes - Fenix:</strong> mantenimiento de servicios
+                REST en .NET Core y ASP.NET MVC, desarrollo de nuevas pantallas
+                con Angular 8 y Bootstrap, y trabajo sobre SQL Server.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3 class="section-title">Proyectos propios con valor laboral</h3>
+            <ul>
+              <li>
+                <strong>ChatLens:</strong> aplicacion de escritorio Windows en
+                .NET 8, C# 12 y WPF para traduccion en tiempo real mediante
+                overlay, OCR local y APIs nativas.
+              </li>
+              <li>
+                <strong>ai-models-directory:</strong> aplicacion web desplegada
+                publicamente con React, Vite, Docker, GitHub Actions, GHCR,
+                Traefik y Cloudflare Tunnel sobre infraestructura propia.
+              </li>
+              <li>
+                <strong>Homelab / Plataforma Proxmox:</strong> entorno
+                autoalojado con VMs, LXC, observabilidad, logging, entrega
+                versionada y evolucion hacia orquestacion ligera con k3s.
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="side-column">
+          <section>
+            <h3 class="section-title">Stack tecnico</h3>
+
+            <div class="side-card stack-list">
+              <div>
+                <strong>Frontend</strong>
+                <span>React, Angular 5/7/8/13, TypeScript, Bootstrap, Angular Material, JavaScript</span>
+              </div>
+              <div>
+                <strong>Backend</strong>
+                <span>.NET, .NET Core, ASP.NET MVC, C#, APIs REST, WebServices SOAP</span>
+              </div>
+              <div>
+                <strong>Datos</strong>
+                <span>SQL Server, PostgreSQL, MariaDB, MongoDB, MySQL, Entity Framework</span>
+              </div>
+              <div>
+                <strong>Entrega e infraestructura</strong>
+                <span>Docker, Docker Compose, GitHub Actions, GHCR, Proxmox, Traefik, Cloudflare Tunnel, WireGuard,
+                  Prometheus, Grafana, Loki, Promtail, k3s</span>
+              </div>
+              <div>
+                <strong>Desktop</strong>
+                <span>.NET 8, WPF, Windows.Graphics.Capture, Direct3D 11, Windows.Media.Ocr</span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h3 class="section-title">Formacion</h3>
+
+            <div class="side-card">
+              <h4>Formacion reglada</h4>
+              <ul>
+                <li>Grado Medio en Sistemas Microinformaticos y Redes (2012 - 2014).</li>
+                <li>Grado Superior en Desarrollo de Aplicaciones Multiplataforma (2016 - 2018).</li>
+              </ul>
+            </div>
+
+            <div class="side-card">
+              <h4>Formacion complementaria</h4>
+              <ul>
+                <li>Angular 5, Angular 13 y Angular avanzado con API.</li>
+                <li>Flutter.</li>
+                <li>ASP.NET, ASP.NET Core y React Hooks.</li>
+                <li>Migracion de .NET Framework a .NET 5.</li>
+                <li>Docker, Jenkins, Kubernetes, GitFlow, CI/CD.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h3 class="section-title">Idiomas y enfoque</h3>
+
+            <div class="side-card">
+              <h4>Idiomas</h4>
+              <ul>
+                <li>Castellano nativo.</li>
+                <li>Ingles en mejora continua.</li>
+              </ul>
+            </div>
+
+            <div class="side-card">
+              <h4>Fortalezas</h4>
+              <ul>
+                <li>Autonomia tecnica y aprendizaje continuo.</li>
+                <li>Compromiso con continuidad y mantenimiento real.</li>
+                <li>Capacidad para moverme entre desarrollo e infraestructura.</li>
+                <li>Buena base para explicar decisiones tecnicas con claridad.</li>
+              </ul>
+            </div>
+          </section>
+
+          <p class="footer-note">
+            Si necesitas la version original completa, esta disponible
+            tambien como PDF descargable desde la parte superior.
+          </p>
+        </aside>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

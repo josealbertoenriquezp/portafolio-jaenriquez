@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>JA monogram</title>
+  <rect width="64" height="64" rx="16" fill="#13212b" />
+  <path d="M16 18h18v6H22v12c0 7-3 12-11 12h-1v-6h1c3 0 5-2 5-6V18zm21 30 8-30h9l8 30h-8l-1.5-6h-8L43 48h-6zm9-12h5l-2.5-10-2.5 10z" fill="#f3eee2" />
+</svg>
