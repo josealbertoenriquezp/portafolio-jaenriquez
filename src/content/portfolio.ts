@@ -225,7 +225,7 @@ export const portfolioContent: Record<Language, PortfolioContent> = {
     },
     heroSignals: [
       {
-        title: "Entrega versionada",
+        title: "Entrega versionada.",
         body: "Builds en GitHub Actions, imagenes en GHCR y despliegues orientados a rollback por tag.",
       },
       {
